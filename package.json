@@ -1,0 +1,46 @@
+{
+  "name": "xstream-debounce-accumulate",
+  "version": "1.0.0",
+  "description": "An xstream operator that debounces a stream but accumulates values meantime.",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "start": "tsc --watch",
+    "test": "mocha src/*.test.js --watch",
+    "build": "rm -rf lib && mkdir lib && tsc && cp src/index.js src/index.d.ts lib",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathieueveillard/xstream-debounce-accumulate.git"
+  },
+  "keywords": [
+    "xstream",
+    "rxjs",
+    "observables",
+    "operator",
+    "debounce",
+    "accumulate",
+    "typescript",
+    "javascript",
+    "npm-package"
+  ],
+  "author": "Mathieu Eveillard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mathieueveillard/xstream-debounce-accumulate/issues"
+  },
+  "homepage": "https://github.com/mathieueveillard/xstream-debounce-accumulate#readme",
+  "dependencies": {
+    "@cycle/time": "^0.15.0",
+    "ramda": "^0.25.0",
+    "xstream": "^11.7.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.7.1",
+    "@types/ramda": "^0.25.36",
+    "mocha": "^5.2.0",
+    "typescript": "^3.0.1"
+  }
+}
